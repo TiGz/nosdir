@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 
-  // Hot Reload
+  // Hot Reload using: npm run start:dev
   if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => app.close());
